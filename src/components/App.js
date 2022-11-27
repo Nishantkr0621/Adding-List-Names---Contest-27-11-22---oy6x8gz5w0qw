@@ -4,9 +4,9 @@ import List from "./List";
 const App = () => {
   //code here
   const [ inputData , setInputData] = useState("");
-  const [data , setData] = useState([]);
+  const [list , setList] = useState([]);
   const dataFun = ()=>{
-    setData([...data , inputData]);
+    setList([...list , inputData]);
     setInputData("");
   }
   return (
@@ -14,7 +14,7 @@ const App = () => {
        <input id="input" value={inputData} onChange={(e)=>setInputData(e.target.value)} />
       <button id="button" onClick={dataFun}>Click</button>
        <ul id="list">
-      <List listx={data} />
+      <List listx={list} />
       </ul>
     </div>
   )
